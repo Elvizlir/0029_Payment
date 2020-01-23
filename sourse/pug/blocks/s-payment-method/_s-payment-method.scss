@@ -25,8 +25,13 @@
 		&__item{
 			display: inline-block;
 			color: #000;
+			img{
+				@include mt;
+			}
 			&:hover{
-				transform: translateY(rem(-15));
+				img{
+					transform: translateY(rem(-15));
+				}
 				color: #6488c2;
 				text-decoration: none;
 			}
