@@ -51,7 +51,7 @@
 			content: '';
 			width: rem(8);
 			height: rem(8);
-			top: 48%; 
+			top: 50%; 
 			right: rem(5);
 			border-bottom: 2px solid $primary;
 			border-right: 2px solid $primary;
@@ -67,6 +67,12 @@
 				margin-top: 3px;
 				transform: rotate(-135deg) translateY(-50%);
 			}
+		}
+	}
+
+	&__payment-title{
+		@include media-breakpoint-down(sm){
+			padding-top: rem(2);
 		}
 	}
 
