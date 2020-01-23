@@ -37,9 +37,6 @@
 		color: $primary;
 		padding-right: rem(20);
 		@include mt;
-		@include media-breakpoint-down(sm){
-			padding-top: rem(2);
-		}
 		img{
 			max-height: rem(50);
 			width: auto;
@@ -73,6 +70,7 @@
 	&__payment-title{
 		@include media-breakpoint-down(sm){
 			padding-top: rem(2);
+			line-height: 1;
 		}
 	}
 
