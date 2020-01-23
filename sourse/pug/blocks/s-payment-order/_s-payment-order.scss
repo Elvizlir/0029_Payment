@@ -1,6 +1,9 @@
 
 // start .s-payment-order
 .s-payment-order {
+	@include media-breakpoint-down(sm){
+		padding: rem(60) 0;
+	}
 
 	&__head-row{
 		position: relative;
@@ -34,6 +37,9 @@
 		color: $primary;
 		padding-right: rem(20);
 		@include mt;
+		@include media-breakpoint-down(sm){
+			padding-top: rem(2);
+		}
 		img{
 			max-height: rem(50);
 			width: auto;
@@ -43,7 +49,8 @@
 			position: absolute;
 			display: block;
 			content: '';
-			width: rem(8); height: rem(8);
+			width: rem(8);
+			height: rem(8);
 			top: 50%; right: rem(5);
 			border-bottom: 2px solid $primary;
 			border-right: 2px solid $primary;
