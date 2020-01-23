@@ -14,10 +14,6 @@
 			margin: 0;
 		}
 
-		&__main-row{
-
-		}
-
 		&__col{
 			margin-bottom: rem(40);
 			text-align: center;
@@ -75,6 +71,10 @@
 					color: $primary;
 					background: transparent;
 					cursor: pointer;
+					@include mt;
+					&:hover{
+						opacity: .7;
+					}
 				}
 					.custom-select-trigger:after {
 						position: absolute;

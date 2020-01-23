@@ -16,10 +16,10 @@ const JSCCommon = {
 	// 	});
 	// },
 	// // /табы  
-	// inputMask() {
-	// 	// mask for input
-	// 	$('input[type="tel"]').attr("pattern", "[+][0-9]{1}[(][0-9]{3}[)][0-9]{3}-[0-9]{2}-[0-9]{2}").inputmask("+9(999)999-99-99");
-	// }
+	inputMask() {
+		// mask for input
+		$('input[name="card"]').attr("pattern", "[0-9]{4}[-][0-9]{4}[-][0-9]{4}[-][0-9]{4}").inputmask("9999-9999-9999-9999");
+	}
 	// // /inputMask
 
 };
@@ -34,7 +34,7 @@ function eventHandler() {
 
 	// JSCCommon.tabscostume('tabs');
 
-	// JSCCommon.inputMask();
+	JSCCommon.inputMask();
 
 	$(".main-wrapper").after('<div class="screen" style="background-image: url(screen/main.jpg);"></div>')
 
@@ -77,6 +77,16 @@ function eventHandler() {
 		$(this).addClass("selection");
 		$(this).parents(".custom-select").removeClass("opened");
 		$(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
+	});
+
+	$('.s-payment-order__payment-trigger').click(function () {
+		$(this).toggleClass('active');
+		$(this).siblings('.s-payment-order__payment-toggle').toggleClass('active');
+	});
+	
+	$('.s-payment-order__order-item').click(function () {
+		$('.s-payment-order__payment-trigger').toggleClass('active');
+		$('.s-payment-order__payment-toggle').toggleClass('active');
 	});
 
 	$('.custom-select .custom-option').click(function () {

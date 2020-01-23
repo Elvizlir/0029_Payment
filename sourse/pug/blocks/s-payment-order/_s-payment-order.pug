@@ -1,0 +1,31 @@
+mixin s-payment-order()
+	// start s-payment-order
+	+b.SECTION.s-payment-order.section#s-payment-order&attributes(attributes)
+		.container
+			+e.head-row.row
+				.col-md-auto
+					+e.H2.title Оплата через Яндекс.Деньги
+				.col
+					+e.payment-wrap
+						+e.payment-trigger
+							img.res-i(src='img/@2x/payment-i.png' alt='')
+							| Яндекс.Деньги
+						+e.payment-toggle
+							+e.order-row.row
+								mixin order-i()
+									+e.order-col.col-sm-3.col-4.col-md-4.col-lg-3
+										+e.order-item.btn(type="button")
+											img.res-i(src='img/@2x/order-i.jpg' alt='')
+								- for (var x = 0; x < 12; x++)
+									+order-i()
+			+e.main-row.row
+				.col-md-5.col-lg-4
+					+form-wrap
+						+input('Номер кошелька', 'text', '', 'card')(required)
+						+e.btn.btn.btn-light-2(type="submit") Оплатить 1020,38 ₽
+						+e.polite Нажимая кнопку оплатить, вы соглашаетесь с 
+							a(href='#') публичным соглашением 
+							| и 
+							a(href='#') довогором офферты
+					
+	// end s-payment-order
