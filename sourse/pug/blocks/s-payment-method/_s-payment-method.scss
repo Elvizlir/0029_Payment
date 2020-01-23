@@ -21,6 +21,9 @@
 		&__col{
 			margin-bottom: rem(40);
 			text-align: center;
+			&.disabled{
+				display: none;
+			}
 		}
 
 		&__item{

@@ -7,27 +7,34 @@ mixin s-payment-method()
 					+e.H2.title Способы оплаты
 				.col-auto
 					select.custom-select.sources(name="sources" placeholder='Все способы')
-							option(value="Relevance") Все способы
-							option(value="new") Банковские крты
-							option(value="popular") Эл. кошельки
-							option(value="priceHigh") Системы переводов
-							option(value="priceLow") Другое
+							option(value="all") Все способы
+							option(value="card") Банковские крты
+							option(value="pocket") Эл. кошельки
+							option(value="transfer") Системы переводов
+							option(value="other") Другое
 			+e.main-row.row
-				mixin i()
-					+e.col.col-md-3.col-sm-4.col-6
+				mixin i(t)
+					+e.col.col-md-3.col-sm-4.col-6&attributes(attributes)
 						+e.A.item(href='#')
 							+e.item-img-wrap
 								img.res-i(src='img/@2x/payment-item.png' alt='')
-							+e.item-title QIWI Кошелек
-				+i()
-				+i()
-				+i()
-				+i()
-				+i()
-				+i()
-				+i()
-				+i()
-				+i()
-				+i()
+							+e.item-title=t
+				+i('QIWI Кошелек')(data-value='pocket')
+				+i('Банковская карта')(data-value='card')
+				+i('Денежный перевод')(data-value='transfer')
+				+i('Любой другой вариант')(data-value='other')
+				+i('QIWI Кошелек')(data-value='pocket')
+				+i('Денежный перевод')(data-value='transfer')
+				+i('Любой другой вариант')(data-value='other')
+				+i('Денежный перевод')(data-value='transfer')
+				+i('Банковская карта')(data-value='card')
+				+i('Любой другой вариант')(data-value='other')
+				+i('QIWI Кошелек')(data-value='pocket')
+				+i('Любой другой вариант')(data-value='other')
+				+i('Денежный перевод')(data-value='transfer')
+				+i('QIWI Кошелек')(data-value='pocket')
+				+i('Любой другой вариант')(data-value='other')
+				+i('Банковская карта')(data-value='card')
+				+i('Любой другой вариант')(data-value='other')
 
 	// end s-payment-method

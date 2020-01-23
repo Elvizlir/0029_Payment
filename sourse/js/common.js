@@ -79,6 +79,22 @@ function eventHandler() {
 		$(this).parents(".custom-select").find(".custom-select-trigger").text($(this).text());
 	});
 
+	$('.custom-select .custom-option').click(function () {
+		let value = $(this).attr("data-value"),
+				payItem = $('.s-payment-method__col');
+		
+		if (value === 'all') {
+			payItem.removeClass('disabled');
+		} else {
+			payItem.addClass('disabled');
+			payItem.each(function (e) {
+				if ($(this).attr('data-value') === value) {
+					$(this).removeClass('disabled');
+				}
+			});
+		}
+	});
+
 	var gets = (function() {
 		var a = window.location.search;
 		var b = new Object();
