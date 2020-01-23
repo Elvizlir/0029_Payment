@@ -1,0 +1,2 @@
+<a href='https://elvizlir.github.io/0029_Payment/public/index.html'> Выбор Оплаты </a><br>
+<a href='https://elvizlir.github.io/0029_Payment/public/02-payment-page.html'> Оплата через выбранную платежную систему </a><br>
