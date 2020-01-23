@@ -1,0 +1,18 @@
+mixin footer()
+	+b.FOOTER.footer.block-with-lazy
+		.container
+			+e.main-row.row
+				+e.title-col.col-sm-auto.order-sm-last
+					+e.title ООО “НАЗВАНИЕ САЙТА”
+					+e.subtitle Система приема платяжей
+				.col
+					+e.mini-title Название сайта
+					+e.links-row.row
+						+e.link-col.col-lg-auto.col-sm-6
+							+e.A.link(href='#') Контакты
+						+e.link-col.col-lg-auto.col-sm-6
+							+e.A.link(href='#') Договор офферты
+						+e.link-col.col-lg-auto.col-sm-6
+							+e.A.link(href='#') Условия пользования
+						+e.link-col.col-lg-auto.col-sm-6
+							+e.A.link(href='#') Поддержка

@@ -1,0 +1,27 @@
+mixin header-block()
+	// start header-block
+	+b.header-block#header-block
+		.container
+			+b.secure-info
+				+icon('lock')
+				+e.text Ваши данные о платеже под защитой
+			+e.main-wrap
+				+e.H1.main-price 1020
+					span ,38 
+					| ₽
+					+icon('price-arrow')
+				+e.info-block
+					.row
+						+e.info-col.col-lg-2.col-sm-4.col-6
+							+e.info-title Номер заказа:
+						+e.info-col.col-lg-10.col-sm-8.col-6
+							+e.info-text 42471
+						+e.info-col.col-lg-2.col-sm-4.col-6
+							+e.info-title Магазин:
+						+e.info-col.col-lg-10.col-sm-8.col-6
+							+e.info-text МагнитКосметик
+						+e.info-col.col-lg-2.col-sm-4.col-6
+							+e.info-title Информация:
+						+e.info-col.col-lg-10.col-sm-8.col-6
+							+e.info-text Тестовая покупка товара
+	// end header-block

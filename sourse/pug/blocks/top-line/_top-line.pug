@@ -1,0 +1,14 @@
+mixin top-line()
+	// start .top-line
+	+b.top-line.block-with-lazy
+		.container
+			+e.row.row
+				+e.col.col-auto
+					+e.A.logo-wrap(href='#')
+						img.res-i(src='img/@2x/logo.png' alt='')
+				+e.col.col-auto
+					+b.secure-info
+						+icon('lock')
+						+e.text Ваши данные о платеже под защитой
+
+	// end .top-line
